@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,300italic);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: url(che\ guvera.jpg) 105px center no-repeat;
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.quote {
+  position: relative;
+  margin-top: 88px;
+  padding: 0 30px;
+}
+
+.quote:before {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  content: "„";
+  font-family: Arial;
+  font-size: 150px;
+  color: #ede7d3;
+  line-height: 35px;
+  top: -55px;
+  left: 15px;
+  opacity: 0.2;
+}
+
+.quote p {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 35px;
+  margin: 20px 0;
+}
+
+.quote .author {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.quote .tooltip {
+  position: relative;
+  display: inline-block;
+  background: #95a5a6;
+  padding: 0px 8px 5px 8px;
+  margin: -10px 0;
+  cursor: pointer;
+}
+
+.quote .tooltip:hover .info,
+.quote .tooltip:focus .info {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.quote .tooltip .info {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 53px;
+  left: -50px;
+  display: block;
+  background: #bdc3c7;
+  width: 300px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: text;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 5px;
+  transform: translate3d(0, -20px, 0);
+  transition: all 0.5s ease-out;
+}
+
+.quote .tooltip .info::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 14px;
+  bottom: -14px;
+  left: 0;
+}
+
+.quote .tooltip .info::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+}
+
+.quote .tooltip .info .pronounce {
+  display: block;
+  background: #7f8c8d;
+  color: #fff;
+  padding: 8px 17px 10px 17px;
+  line-height: 16px;
+}
+
+.quote .tooltip .info .pronounce .fa {
+  position: relative;
+  margin-left: 10px;
+  top: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.quote .tooltip .info .pronounce .fa:hover {
+  transform: scale(1.15) translate3d(0, 0, 0);
+  backface-visibility: none;
+}
+
+.quote .tooltip .info .text {
+  display: block;
+  padding: 13px 17px;
+  color: #000;
+}
