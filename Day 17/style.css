@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 30px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  background: linear-gradient(
+    135deg,
+    #329cba 25%,
+    #fff 25%,
+    #fff 50%,
+    #329cba 50%,
+    #329cba 75%,
+    #fff 75%
+  );
+  background-size: 20px 20px;
+  animation: move 4s linear infinite;
+  color: #fff;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.frame:hover {
+  animation: move 1s linear infinite;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 20px 20px;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease;
+  animation: move 5s linear infinite;
+}
+
+.center:hover {
+  background: #a04040;
+  border-radius: 50%;
+}
+
+h1 {
+  position: relative;
+  font-size: 24px;
+  line-height: 2px;
+  top: 200px;
+  left: 25%;
+  animation: hoverMe 2s ease-in-out forwards;
+  transform-origin: 60px 0;
+}
+
+.polygon {
+  width: 160.5px;
+  height: 140px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.light {
+  fill: #eeeeee;
+  transition: 0.5s ease;
+}
+
+.medium {
+  fill: #cccccc;
+  transition: 0.5s ease;
+}
+
+.dark {
+  fill: #aaaaaa;
+  transition: 0.5s ease;
+}
+
+.polygon:hover .light {
+  fill: #329cba;
+}
+.polygon:hover .medium {
+  fill: #73c9e2;
+}
+.polygon:hover .dark {
+  fill: #49b3d1;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+@keyframes hoverMe {
+  from {
+    scale: 1;
+    display: block;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    scale: 0;
+  }
+}
