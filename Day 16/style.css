@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 3px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4554da;
+  color: #333;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.circle {
+  position: absolute;
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  left: 155px;
+  top: 155px;
+  animation: circle 5s ease-in-out infinite;
+}
+
+.outer-circle {
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  left: 142px;
+  top: 142px;
+  border: 3px solid white;
+  opacity: 0;
+  animation: outer-circle 5s ease-in-out infinite;
+}
+
+.octagon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  fill: #fff;
+  left: 150px;
+  top: 150px;
+  rotate: 22.5deg;
+  scale: 0;
+  animation: octagon 5s ease-in-out infinite;
+}
+
+.octagon-sparks {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 100px;
+  left: 100px;
+  z-index: 10;
+  scale: 0;
+  animation: octagon-sparks 5s ease-in-out infinite;
+}
+
+.octagon-sparks .spark-1 {
+  position: absolute;
+  top: 99px;
+  left: 99px;
+  rotate: 45deg;
+}
+.octagon-sparks .spark-1:before,
+.octagon-sparks .spark-1:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+  z-index: 10;
+  background: white;
+  border-radius: 4px;
+}
+.octagon-sparks .spark-1:before {
+  left: 50px;
+}
+.octagon-sparks .spark-1:after {
+  right: 50px;
+  top: -3.5px;
+}
+.octagon-sparks .spark-2 {
+  position: absolute;
+  top: 99px;
+  left: 99px;
+  rotate: 90deg;
+}
+.octagon-sparks .spark-2:before,
+.octagon-sparks .spark-2:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+  z-index: 10;
+  background: white;
+  border-radius: 4px;
+}
+.octagon-sparks .spark-2:before {
+  left: 50px;
+}
+.octagon-sparks .spark-2:after {
+  right: 50px;
+  top: -3.5px;
+}
+.octagon-sparks .spark-3 {
+  position: absolute;
+  top: 99px;
+  left: 99px;
+  rotate: 135deg;
+}
+.octagon-sparks .spark-3:before,
+.octagon-sparks .spark-3:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+  z-index: 10;
+  background: white;
+  border-radius: 4px;
+}
+.octagon-sparks .spark-3:before {
+  left: 50px;
+}
+.octagon-sparks .spark-3:after {
+  right: 50px;
+  top: -3.5px;
+}
+.octagon-sparks .spark-4 {
+  position: absolute;
+  top: 99px;
+  left: 99px;
+  rotate: 180deg;
+}
+.octagon-sparks .spark-4:before,
+.octagon-sparks .spark-4:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+  z-index: 10;
+  background: white;
+  border-radius: 4px;
+}
+.octagon-sparks .spark-4:before {
+  left: 50px;
+}
+.octagon-sparks .spark-4:after {
+  right: 50px;
+  top: -3.5px;
+}
+
+.triangle {
+  position: absolute;
+  fill: #fff;
+  left: 147px;
+  top: 145px;
+  width: 106px;
+  height: 90px;
+  scale: 0;
+  animation: triangle 5s ease-in-out infinite;
+}
+
+.triangle-sparks {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 100px;
+  top: 100px;
+  scale: 0;
+  animation: triangle-sparks 5s ease-in-out infinite;
+}
+
+.triangle-sparks .spark-1 {
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  left: 25px;
+  top: 136px;
+  rotate: -30deg;
+}
+
+.triangle-sparks .spark-2 {
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  right: 27px;
+  top: 136px;
+  rotate: 30deg;
+}
+
+.triangle-sparks .spark-3 {
+  position: absolute;
+  height: 4px;
+  width: 25px;
+  background: #fff;
+  border-radius: 4px;
+  right: 88.5px;
+  top: 32px;
+  rotate: 90deg;
+}
+
+@keyframes circle {
+  0% {
+    transform: translate3d(0, -300px, 0) scaleY(1.2);
+  }
+  10% {
+    transform: translate3d(0, 50px, 0) scaleY(0.8);
+  }
+  14% {
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+  18% {
+    transform: translate3d(0, 15px, 0) scaleY(0.9);
+  }
+  20%,
+  22% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  25%,
+  80% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+  30%,
+  74% {
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  84% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  86%,
+  88% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  92% {
+    transform: translate3d(0, -30px, 0) scaleY(0.9);
+  }
+  100% {
+    transform: translate3d(0, 300px, 0) scaleY(1.2);
+  }
+}
+
+@keyframes outer-circle {
+  0%,
+  80% {
+    opacity: 0;
+    scale: 1;
+  }
+  81% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 0;
+    scale: 1.6;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+@keyframes octagon {
+  0%,
+  30% {
+    transform: translate3d(0, 0, 0);
+    scale: 0;
+  }
+  36% {
+    transform: translate3d(0, 0, 0);
+    scale: 1.2;
+  }
+  40% {
+    transform: translate3d(0, 0, 0);
+    scale: 0.9;
+  }
+  42%,
+  44% {
+    transform: translate3d(0, 0, 0);
+    scale: 1;
+  }
+  48% {
+    transform: translate3d(0, 0, 0);
+    scale: 1.2;
+  }
+  54%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    scale: 0;
+  }
+}
+
+@keyframes octagon-sparks {
+  0%,
+  30% {
+    scale: 0;
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    opacity: 0;
+    scale: 1.4;
+  }
+}
+
+@keyframes triangle {
+  0%,
+  52% {
+    transform: translate3d(0, 0, 0);
+    scale: 0;
+  }
+  58% {
+    transform: translate3d(0, 0, 0);
+    scale: 1.2;
+  }
+  62% {
+    transform: translate3d(0, 0, 0);
+    scale: 0.9;
+  }
+  64%,
+  66% {
+    transform: translate3d(0, 0, 0);
+    scale: 1;
+  }
+  70% {
+    transform: translate3d(0, 0, 0);
+    scale: 1.2;
+  }
+  76%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    scale: 0;
+  }
+}
+
+@keyframes triangle-sparks {
+  0%,
+  52% {
+    scale: 0;
+    opacity: 1;
+  }
+  58% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0;
+    scale: 1.4;
+  }
+}
