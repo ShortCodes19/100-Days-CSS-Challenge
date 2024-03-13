@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  color: #3f3f3f;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2196f3;
+}
+
+.map svg {
+  fill: #1f8de4;
+}
+
+.marker {
+  position: absolute;
+  z-index: 5;
+  top: 151px;
+  left: 176px;
+  font-size: 0;
+  cursor: pointer;
+  transform: perspective(600px) rotateY(0deg);
+  opacity: 1;
+  transition: all 0.5s ease 0.4s;
+}
+
+.marker.inactive {
+  transform: perspective(600px) rotateY(-90deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.marker svg {
+  fill: #ffcc30;
+  animation: hovering 1.8s ease-in-out infinite alternate;
+}
+
+.marker .shadow {
+  width: 18px;
+  height: 4px;
+  background: #1b7ac7;
+  border-radius: 50%;
+  margin: 5px auto 0 auto;
+  animation: shadow 1.8s ease-in-out infinite alternate;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  background: #ffcc30;
+  border-radius: 20px;
+  opacity: 0;
+  transform: perspective(600px) rotateY(90deg) scale(0.5);
+  pointer-events: none;
+  transition: all 0.5s ease;
+  box-shadow: 0px 6px 10px #3483e3;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card.active {
+  transform: perspective(600px) rotateY(0deg);
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.5s ease 0.4s;
+  background: #fff;
+}
+
+.card .header {
+  height: 120px;
+  width: 100%;
+  background: url("mosque.jpg");
+  background-repeat: round;
+}
+
+.card .subtitle {
+  margin: 12px 0px;
+  font-weight: 900;
+  color: #b98243;
+}
+
+.card .description {
+  font-size: 12px;
+}
+
+.card .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px 10px 10px;
+}
+
+.card .footer .divider {
+  width: 1px;
+  height: 14px;
+  background: #1f8de4;
+}
+
+.card .footer button {
+  background: none;
+  border: none;
+  color: #1f8de4;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes hovering {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
