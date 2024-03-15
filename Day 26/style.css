@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,200,400,500,600,700);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  color: #fff;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  transition: 0.6s ease-in-out;
+  transform-origin: center;
+}
+
+.card {
+  position: absolute;
+  z-index: 0;
+  width: 240px;
+  height: 300px;
+  top: 50px;
+  left: 80px;
+  background: #323f48;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+}
+
+.card.active {
+  pointer-events: all;
+  z-index: 1;
+  animation: fadeIn 0.5s ease-in-out both 0.5s;
+}
+.card.inactive {
+  z-index: 2;
+  animation: fadeOut 0.6s ease-in-out both;
+}
+
+.card .number-bg {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -31px;
+  right: -31px;
+  background: #8391a1;
+  transform: rotate(45deg);
+}
+
+.card .number {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card .text {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.card .text .headline {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 22px;
+  font-weight: 200;
+  color: #d2d9e1;
+  margin-bottom: 8px;
+}
+
+.card .text .headline::before {
+  content: ">>";
+  position: relative;
+  right: 4px;
+}
+
+.card .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #d2d9e1;
+  margin: 0;
+}
+
+.card .button {
+  cursor: pointer;
+}
+
+.card .button img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+  filter: grayscale(100%) brightness(100%);
+}
+
+.card .button img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
