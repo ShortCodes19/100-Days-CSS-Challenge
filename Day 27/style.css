@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:500,600,700);
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(45deg, #24494d, #8dc2e9);
+  color: #333;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 280px;
+  background: #fff;
+  border-radius: 5px;
+  color: #253b49;
+  padding: 1.3rem;
+  font-size: 0.7rem;
+}
+
+.card .title {
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.card .title span {
+  display: block;
+  font-weight: 600;
+}
+
+.card .title span:first-child {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+}
+
+.card .list {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+
+.card .list div[class^="list"] {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+}
+
+.card .list .text {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  width: 100%;
+  transition: all 1s ease 0.5s;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.card .list input {
+  display: none;
+}
+
+.card .list input:checked ~ .text {
+  color: #c7d6e1;
+  transition: all 1s ease;
+}
+.card .list input:checked ~ .checkmark {
+  stroke-dashoffset: 0;
+  stroke: #c7d6e1;
+  transition: all 1s ease 0.5s;
+}
+.card .list input:checked ~ .circle {
+  transform: scale(1.4);
+  opacity: 0;
+  border-color: #c7d6e1;
+  transition: all 1s ease;
+}
+.card .list .circle {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #253b49;
+  border-radius: 50%;
+  transition: all 1s ease 0.5s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card .list .checkmark {
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  fill: none;
+  stroke: #253b49;
+  stroke-width: 2;
+}
