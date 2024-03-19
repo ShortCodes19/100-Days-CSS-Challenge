@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: url(back.png);
+  overflow: hidden;
+}
+
+nav {
+  position: sticky;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 40px 150px;
+  z-index: 100;
+}
+
+nav .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin: -10px -10px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: auto 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: all 0.8s ease;
+}
+
+li:hover a,
+#active {
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+
+#heading {
+  position: relative;
+  top: 40px;
+  text-align: center;
+  font-size: 14rem;
+  font-weight: 900;
+  letter-spacing: 7px;
+  color: #81c2d3;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+img {
+  position: absolute;
+}
+
+#moon {
+  left: 800px;
+  top: -10px;
+  scale: 1.2;
+}
+
+#cloud1 {
+  position: fixed;
+  left: -300px;
+  top: 0px;
+  scale: 0.8;
+  opacity: 0.9;
+}
+
+#cloud2 {
+  position: fixed;
+  right: -300px;
+  top: 10px;
+  opacity: 1;
+  scale: 0.8;
+  filter: brightness(100%);
+  z-index: -2;
+}
+
+#base {
+  top: -200px;
+  right: -200px;
+  filter: brightness(20%) saturate(-40%);
+  z-index: -3;
+}
+
+.text {
+  position: relative;
+  background: #000;
+  color: #fff;
+  padding: 50px 120px;
+  top: -50%;
+}
