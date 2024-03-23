@@ -1,0 +1,119 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: #bdc3c7;
+  border-radius: 5px;
+  box-shadow: 10px 20px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 90px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #51aae6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-radius 0.3s;
+  z-index: 100;
+}
+
+button:hover {
+  background-color: #2980b9;
+  border-radius: 10px;
+}
+
+.social-icons i {
+  font-size: 75px;
+  cursor: pointer;
+}
+
+.social-icons .icon-1 {
+  position: absolute;
+  top: 163px;
+  left: 168px;
+  visibility: hidden;
+  opacity: 0;
+  color: #316ff6;
+  transition: visibility 0.3s, opacity 0.5s, top 0.5s, left 0.5s;
+  transition-delay: 1s;
+}
+
+button:hover + .social-icons .icon-1 {
+  top: 90px;
+  left: 167px;
+  visibility: visible;
+  opacity: 1;
+  color: #316ff6;
+  transition-delay: 0ms;
+}
+
+.social-icons .icon-2 {
+  position: absolute;
+  bottom: 164px;
+  right: 168px;
+  font-size: 70px;
+  visibility: hidden;
+  opacity: 0;
+  color: #229ed9;
+  transition: visibility 0.3s, opacity 0.5s, bottom 0.5s;
+  transition-delay: 1s;
+}
+
+button:hover + .social-icons .icon-2 {
+  bottom: 90px;
+  visibility: visible;
+  opacity: 1;
+  color: #229ed9;
+  transition-delay: 0ms;
+}
+
+.social-icons .icon-3 {
+  position: absolute;
+  top: 170px;
+  right: 168px;
+  font-size: 70px;
+  visibility: hidden;
+  opacity: 0;
+  color: #1da1f2;
+  transition: visibility 0.3s, opacity 0.5s, right 0.5s;
+  transition-delay: 1s;
+}
+
+button:hover + .social-icons .icon-3 {
+  right: 75px;
+  visibility: visible;
+  opacity: 1;
+  color: #1da1f2;
+  transition-delay: 0ms;
+}
+
+.social-icons .icon-4 {
+  position: absolute;
+  top: 163px;
+  left: 168px;
+  visibility: hidden;
+  opacity: 0;
+  color: #2e2828;
+  transition: visibility 0.3s, opacity 0.5s, left 0.5s;
+  transition-delay: 1s;
+}
+
+button:hover + .social-icons .icon-4 {
+  left: 75px;
+  visibility: visible;
+  opacity: 1;
+  color: #2e2828;
+  transition-delay: 0ms;
+}
