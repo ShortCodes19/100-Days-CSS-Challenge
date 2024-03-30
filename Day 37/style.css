@@ -1,0 +1,128 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #1a5574;
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 130px;
+  top: 135px;
+  left: 0;
+  transform: perspective(60px);
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  top: 0;
+  left: 130px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .top {
+  width: 100%;
+  height: 30px;
+  background: #9f92db;
+}
+
+.card .top .number {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 5px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.card .top .number-bg-1 {
+  background: rgba(255, 0, 0, 0.718);
+}
+.card .top .number-bg-2 {
+  background: rgba(255, 255, 0, 0.725);
+}
+.card .top .number-bg-3 {
+  background: rgba(16, 177, 16, 0.725);
+}
+
+.card .content {
+  padding: 17px 14px;
+}
+
+.card .line {
+  height: 4px;
+  background: #bdb0b0b4;
+  margin-bottom: 6px;
+}
+
+.card-1 {
+  animation: switch-1 5s ease-in-out infinite both;
+}
+.card-2 {
+  animation: switch-2 5s ease-in-out infinite both;
+}
+.card-3 {
+  animation: switch-3 5s ease-in-out infinite both;
+}
+
+@keyframes switch-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+  33.33% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  66.66% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes switch-2 {
+  0%,
+  100% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  33.33% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  66.66% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes switch-3 {
+  0%,
+  100% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  33.33% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+  66.66% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+}
